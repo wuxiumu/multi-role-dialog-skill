@@ -3,6 +3,7 @@ import { Link, Navigate } from 'react-router-dom'
 import { useAuth } from '../../store/AuthContext.jsx'
 import { fetchLlmProviders } from '../../api/llm.js'
 import { toast } from '../../components/Toast.jsx'
+import { Seo } from '../../seo/Seo.jsx'
 import './ProfilePage.css'
 
 export function ProfilePage() {
@@ -39,6 +40,7 @@ export function ProfilePage() {
 
   return (
     <main className="profile">
+      <Seo title="个人中心" path="/profile" noIndex />
       <div className="profile__card">
         <p className="profile__eyebrow">Account</p>
         <h1>个人中心</h1>

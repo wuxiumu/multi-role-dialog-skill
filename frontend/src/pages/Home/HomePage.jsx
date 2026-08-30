@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { fetchRoleList } from '../../api/roles.js'
 import { CATEGORIES } from '../../api/mockRoles.js'
 import { RoleCard } from '../../components/RoleCard.jsx'
+import { Seo } from '../../seo/Seo.jsx'
 import './HomePage.css'
 
 export function HomePage() {
@@ -44,6 +45,11 @@ export function HomePage() {
 
   return (
     <main className="home">
+      <Seo
+        title="角色场 · 多角色克隆对话"
+        description="挑选名人、客服、星座、榜样等人设立刻开聊。吴庆宝（wuqingbao）的多角色克隆对话平台，支持游客匹配与登录大模型。"
+        path="/"
+      />
       <section className="home__hero">
         <p className="home__eyebrow">Role Plaza</p>
         <h1 className="home__brand">角色场</h1>

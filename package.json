@@ -1,0 +1,29 @@
+{
+  "name": "multi-role-dialog-skill",
+  "private": true,
+  "version": "1.0.0",
+  "description": "角色场 · 多角色克隆对话（React + 原生 PHP）— 吴庆宝 / wuqingbao",
+  "author": "吴庆宝 <wuqingbao>",
+  "homepage": "https://multi-role-dialog-skill.wuqingbao.com",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "./dev.sh start",
+    "start": "./dev.sh start",
+    "stop": "./dev.sh stop",
+    "restart": "./dev.sh restart",
+    "status": "./dev.sh status",
+    "dev:frontend": "./dev.sh frontend",
+    "dev:backend": "./dev.sh backend",
+    "stop:frontend": "./dev.sh stop-fe",
+    "stop:backend": "./dev.sh stop-be",
+    "build": "npm run build --prefix frontend",
+    "build:frontend": "npm run build --prefix frontend",
+    "preview": "npm run preview --prefix frontend",
+    "lint": "npm run lint --prefix frontend",
+    "install:frontend": "npm install --prefix frontend",
+    "postinstall": "npm install --prefix frontend"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -106,31 +106,33 @@ export function pickLatestVariantIndex(variants) {
 function sanitizeVariants(variants) {
   const out = []
   const seenReply = new Set()
-  for (const v of variants) {
-    if (!v) continue
-    let provider = v.provider || 'unknown'
+  for (const raw of variants) {
+    if (!raw) continue
+    let provider = raw.provider || 'unknown'
+    let item = raw
     // none/current/offline → 并入 default，避免与「默认语录」重复
     if (provider === 'none' || provider === 'current' || provider === 'offline') {
       provider = 'default'
-      v = {
-        ...v,
+      item = {
+        ...raw,
         provider: 'default',
-        provider_name: v.provider_name === 'none' || v.provider_name === 'current' || !v.provider_name
-          ? '默认语录'
-          : v.provider_name,
+        provider_name:
+          raw.provider_name === 'none' || raw.provider_name === 'current' || !raw.provider_name
+            ? '默认语录'
+            : raw.provider_name,
         is_default: true,
         from_cache: false,
         model: '',
       }
     }
-    const reply = String(v.reply || '').trim()
+    const reply = String(item.reply || '').trim()
     if (!reply || seenReply.has(reply)) continue
     seenReply.add(reply)
     // 已有 default 时跳过第二个 default（保留第一条，通常已被会话文案覆盖）
-    if ((provider === 'default' || v.is_default) && out.some((x) => x.is_default || x.provider === 'default')) {
+    if ((provider === 'default' || item.is_default) && out.some((x) => x.is_default || x.provider === 'default')) {
       continue
     }
-    out.push({ ...v, provider, reply })
+    out.push({ ...item, provider, reply })
   }
   return out
 }

@@ -1,7 +1,10 @@
 {
-  "name": "frontend",
+  "name": "multi-role-dialog-skill-frontend",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "角色场前端 · 吴庆宝 / wuqingbao",
+  "homepage": "https://multi-role-dialog-skill.wuqingbao.com",
+  "author": "吴庆宝",
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../../store/AuthContext.jsx'
 import { request } from '../../api/client.js'
 import { toast } from '../../components/Toast.jsx'
+import { Seo } from '../../seo/Seo.jsx'
 import './LoginPage.css'
 
 export function LoginPage() {
@@ -38,6 +39,7 @@ export function LoginPage() {
   if (isLoggedIn) {
     return (
       <main className="login">
+        <Seo title="已登录" path="/login" noIndex />
         <div className="login__card">
           <h1>你已登录</h1>
           <p>可前往个人中心切换模型，或回广场开始对话。</p>
@@ -59,6 +61,11 @@ export function LoginPage() {
 
   return (
     <main className="login">
+      <Seo
+        title="登录"
+        description="登录角色场，解锁 DeepSeek / 通义千问等大模型对话；也可关闭模型仅用离线匹配。"
+        path="/login"
+      />
       <form className="login__card" onSubmit={onSubmit}>
         <p className="login__eyebrow">Unlock AI</p>
         <h1>登录</h1>

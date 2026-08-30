@@ -10,6 +10,7 @@ import { ChatDebugPanel, useDebugGate } from '../../components/ChatDebugPanel.js
 import { RoleAvatar } from '../../components/RoleAvatar.jsx'
 import { ShareSheet } from '../../components/ShareSheet.jsx'
 import MarkdownBubble from '../../components/MarkdownBubble.jsx'
+import { Seo } from '../../seo/Seo.jsx'
 import { copyText, pairAroundMessage } from '../../utils/share.js'
 import '../../components/RoleAvatar.css'
 import './ChatPage.css'
@@ -540,6 +541,7 @@ export function ChatPage() {
   if (loadingRole) {
     return (
       <div className="chat-page chat-page--center">
+        <Seo title="加载角色" path={`/chat/${roleSlug || ''}`} />
         <p className="chat-muted">加载角色…</p>
       </div>
     )
@@ -548,6 +550,7 @@ export function ChatPage() {
   if (!role) {
     return (
       <div className="chat-page chat-page--center">
+        <Seo title="角色不存在" path={`/chat/${roleSlug || ''}`} noIndex />
         <h2>角色不存在</h2>
         <p className="chat-muted">这个人设还没入库，或链接写错了。</p>
         <Link to="/" className="btn btn--brand">
@@ -559,6 +562,15 @@ export function ChatPage() {
 
   return (
     <div className="chat-page">
+      <Seo
+        title={`和${role.name}对话`}
+        description={
+          role.tagline ||
+          role.description ||
+          `在角色场与「${role.name}」对话，支持离线匹配与大模型。`
+        }
+        path={`/chat/${role.slug || roleSlug}`}
+      />
       <header className="chat-top">
         <button type="button" className="chat-icon" onClick={() => navigate('/')} title="返回">
           ←

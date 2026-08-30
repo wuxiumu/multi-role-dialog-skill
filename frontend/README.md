@@ -1,12 +1,19 @@
 # 角色场 · 前端
 
-React + Vite 独立前端，对接原生 PHP API。
+React + Vite。作者：吴庆宝（wuqingbao）。线上：https://multi-role-dialog-skill.wuqingbao.com
 
-## 开发
+## 开发 / 打包（推荐在仓库根目录）
 
 ```bash
-./dev.sh start
-# 或
+npm install          # 安装前端依赖（postinstall）
+npm run dev          # 前后端一起启动
+npm run build        # 打包 → frontend/dist
+npm run stop
+```
+
+仅前端：
+
+```bash
 cd frontend && npm install && npm run dev
 ```
 
@@ -16,18 +23,16 @@ cd frontend && npm install && npm run dev
 
 只认一个文件：`.env`（可从 `.env.example` 复制）。
 
-```bash
-cp .env.example .env
-```
-
 | `VITE_API_BASE` | 行为 |
 |-----------------|------|
 | 未配 / 留空 | 本地 `/api` |
-| `https://api.example.com/api` | 走远程；头像等相对路径自动拼到该源站 |
+| `https://api.example.com/api` | 走远程 |
 
-部署前写入远程地址再 `npm run build`。`.env` 已 gitignore，勿提交密钥类配置。
+## SEO
 
-后端跨域时在 `config.local.php` 设置 `cors_origin`、`asset_base`。
+- `index.html`：title / description / Open Graph / JSON-LD（作者吴庆宝）
+- `public/robots.txt`、`sitemap.xml`、`og.png`、`site.webmanifest`
+- 路由级：`src/seo/Seo.jsx` 更新 title 与 canonical
 
 ## 页面
 

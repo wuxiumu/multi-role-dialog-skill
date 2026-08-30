@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://multi-role-dialog-skill.wuqingbao.com/sitemap.xml
+
+# 无需收录的调试页
+Disallow: /llm-key-test
+Disallow: /404

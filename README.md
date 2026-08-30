@@ -141,9 +141,14 @@ V1.2 进阶版
 - 后台富文本MD编辑器
 - 单角色独立大模型API配置
 - 调用日志、数据统计
-十、文档
+十、文档与运维
 - 索引：[`docs/00-readme.md`](docs/00-readme.md)
 - API 契约：[`docs/01-api-contract.md`](docs/01-api-contract.md)
 - 进度与角色矩阵：[`docs/02-dev-progress.md`](docs/02-dev-progress.md)
 - 流程图与角色差异：[`docs/03-architecture-flows.md`](docs/03-architecture-flows.md)
-- 本地开发：`./dev.sh start` → 前端 http://127.0.0.1:5173 ，后端 http://127.0.0.1:8080
+- 站点：https://multi-role-dialog-skill.wuqingbao.com （作者：吴庆宝）
+- 本地开发 / 打包（根目录）：
+  - `npm install` → 安装前端依赖
+  - `npm run dev` / `npm start` → 前后端一起启动（`./dev.sh start`）
+  - `npm run build` → 打包前端到 `frontend/dist`
+  - `npm run stop` → 停止服务

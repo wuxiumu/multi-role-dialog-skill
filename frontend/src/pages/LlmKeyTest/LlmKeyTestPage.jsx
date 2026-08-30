@@ -3,6 +3,7 @@ import { Link, Navigate } from 'react-router-dom'
 import { useAuth } from '../../store/AuthContext.jsx'
 import { fetchLlmProviders, testLlmKey, LLM_MANUAL_PRESETS } from '../../api/llm.js'
 import { toast } from '../../components/Toast.jsx'
+import { Seo } from '../../seo/Seo.jsx'
 import './LlmKeyTestPage.css'
 
 export function LlmKeyTestPage() {
@@ -85,6 +86,7 @@ export function LlmKeyTestPage() {
 
   return (
     <main className="keytest">
+      <Seo title="大模型 Key 测试" path="/llm-key-test" noIndex />
       <div className="keytest__card">
         <p className="keytest__eyebrow">LLM Lab</p>
         <h1>大模型 Key 测试</h1>
