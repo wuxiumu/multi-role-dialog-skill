@@ -70,6 +70,7 @@ multi-role-dialog-skill/
 | 02 | [docs/02-dev-progress.md](docs/02-dev-progress.md) | 进度与角色成熟度 |
 | 03 | [docs/03-architecture-flows.md](docs/03-architecture-flows.md) | 前后端流程图 |
 | 04 | [docs/04-geo-optimization.md](docs/04-geo-optimization.md) | **GEO：成为 AI 可引用的可信信源** |
+| 05 | [docs/05-promo-voiceover-script.md](docs/05-promo-voiceover-script.md) | 推广口播（赢学演示 + 垫乐） |
 
 机器可读摘要（供爬虫 / Agent）：[frontend/public/llms.txt](frontend/public/llms.txt)（构建后位于站点根 `/llms.txt`）。
 
