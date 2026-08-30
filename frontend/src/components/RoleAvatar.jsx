@@ -1,3 +1,5 @@
+import { resolveAssetUrl } from '../api/client.js'
+
 /**
  * 角色头像：优先 avatarSrc（本地 asset / CDN），否则文字 avatar + 渐变底。
  */
@@ -8,7 +10,7 @@ export function RoleAvatar({
   style,
   fallbackText,
 }) {
-  const src = role?.avatarSrc || ''
+  const src = resolveAssetUrl(role?.avatarSrc || '')
   const text = fallbackText ?? role?.avatar ?? (role?.name ? String(role.name).slice(0, 1) : '?')
   const bg = role?.avatarColor || 'linear-gradient(135deg,#94a3b8,#64748b)'
 

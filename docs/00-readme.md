@@ -8,3 +8,5 @@
 | 03 | [03-architecture-flows.md](./03-architecture-flows.md) | 前后端流程图、角色资产差异与品类路径 |
 
 产品总方案见仓库根目录 [`README.md`](../README.md)。本地开发：`./dev.sh start`（前端 `5173`，后端 `8080`）。
+
+跨域部署：前端见 [`frontend/.env.example`](../frontend/.env.example)（`VITE_API_BASE` / `VITE_ASSET_BASE`）；后端在 `config.local.php` 配置 `cors_origin`、`asset_base`。

@@ -9,6 +9,11 @@ return array(
     'llm_enabled' => true,
     'llm_default_provider' => 'deepseek',
 
+    // 前后端不同域名时：填前端源站，或暂时用 *
+    // 'cors_origin' => 'https://www.example.com',
+    // 角色头像等静态资源对外根（无末尾斜杠）；前端也可配 VITE_ASSET_BASE
+    // 'asset_base' => 'https://api.example.com',
+
     // DeepSeek（OpenAI 兼容）
     'llm_providers' => array(
         'deepseek' => array(

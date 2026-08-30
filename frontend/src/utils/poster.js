@@ -1,5 +1,6 @@
 /** Canvas 海报：智能体卡 / 对话卡（含可扫码二维码） */
 import QRCode from 'qrcode'
+import { resolveAssetUrl } from '../api/client.js'
 
 function roundRect(ctx, x, y, w, h, r) {
   const radius = Math.min(r, w / 2, h / 2)
@@ -194,7 +195,7 @@ export async function renderAgentPoster({ role, tagline, url }) {
   const ctx = canvas.getContext('2d')
   drawBackground(ctx, W, H)
 
-  const img = await loadImage(role?.avatarSrc)
+  const img = await loadImage(resolveAssetUrl(role?.avatarSrc))
   const letter = role?.avatar || (role?.name ? String(role.name).slice(0, 1) : '?')
   const color = typeof role?.avatarColor === 'string' && role.avatarColor.startsWith('#')
     ? role.avatarColor
@@ -246,7 +247,7 @@ export async function renderDialoguePoster({ role, userText, aiText, url }) {
   const ctx = canvas.getContext('2d')
   drawBackground(ctx, W, H)
 
-  const img = await loadImage(role?.avatarSrc)
+  const img = await loadImage(resolveAssetUrl(role?.avatarSrc))
   const letter = role?.avatar || (role?.name ? String(role.name).slice(0, 1) : '?')
   const color = typeof role?.avatarColor === 'string' && role.avatarColor.startsWith('#')
     ? role.avatarColor
