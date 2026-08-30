@@ -127,8 +127,7 @@
 }
 
 .chat-empty__logo {
-  width: 60px;
-  height: 60px;
+  width: 99%;
   border-radius: 18px;
   margin: 0 auto 14px;
   font-size: 28px;

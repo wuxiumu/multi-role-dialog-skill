@@ -142,5 +142,8 @@ V1.2 进阶版
 - 单角色独立大模型API配置
 - 调用日志、数据统计
 十、文档
-- 索引与 API 契约：[`docs/00-readme.md`](docs/00-readme.md)
+- 索引：[`docs/00-readme.md`](docs/00-readme.md)
+- API 契约：[`docs/01-api-contract.md`](docs/01-api-contract.md)
+- 进度与角色矩阵：[`docs/02-dev-progress.md`](docs/02-dev-progress.md)
+- 流程图与角色差异：[`docs/03-architecture-flows.md`](docs/03-architecture-flows.md)
 - 本地开发：`./dev.sh start` → 前端 http://127.0.0.1:5173 ，后端 http://127.0.0.1:8080
