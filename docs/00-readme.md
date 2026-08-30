@@ -9,4 +9,4 @@
 
 产品总方案见仓库根目录 [`README.md`](../README.md)。本地开发：`./dev.sh start`（前端 `5173`，后端 `8080`）。
 
-跨域部署：前端见 [`frontend/.env.example`](../frontend/.env.example)（`VITE_API_BASE` / `VITE_ASSET_BASE`）；后端在 `config.local.php` 配置 `cors_origin`、`asset_base`。
+跨域部署：前端只配 [`frontend/.env`](../frontend/.env.example) 的 `VITE_API_BASE`（有值走远程，空则本地 `/api`）；后端在 `config.local.php` 配置 `cors_origin`、`asset_base`。

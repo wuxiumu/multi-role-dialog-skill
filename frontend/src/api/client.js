@@ -1,31 +1,25 @@
 /**
  * 前端请求封装
  *
- * 环境变量（见 .env.example）：
- * - VITE_API_BASE   接口根，如 /api 或 https://api.example.com/api
- * - VITE_ASSET_BASE 角色静态资源源站，如 https://api.example.com（可选）
+ * .env 中 VITE_API_BASE：
+ * - 有值（如 https://api.example.com/api）→ 走远程
+ * - 未配置 / 留空 → 本地默认 /api（开发代理）
  */
 
 function stripTrailingSlash(url) {
   return String(url || '').trim().replace(/\/+$/, '')
 }
 
-const rawApiBase = stripTrailingSlash(import.meta.env.VITE_API_BASE || '/api')
-const API_BASE = rawApiBase || '/api'
+const configured = stripTrailingSlash(import.meta.env.VITE_API_BASE || '')
+const API_BASE = configured || '/api'
 
-/** 绝对 API 地址时，推导静态资源源站（去掉末尾 /api） */
-function deriveAssetBase(apiBase) {
-  if (!/^https?:\/\//i.test(apiBase)) return ''
-  return stripTrailingSlash(apiBase.replace(/\/api$/i, ''))
-}
-
-const ASSET_BASE = stripTrailingSlash(
-  import.meta.env.VITE_ASSET_BASE || deriveAssetBase(API_BASE) || '',
-)
+/** 远程 API 时推导静态资源源站（去掉末尾 /api）；本地相对路径不拼前缀 */
+const ASSET_BASE = /^https?:\/\//i.test(API_BASE)
+  ? stripTrailingSlash(API_BASE.replace(/\/api$/i, ''))
+  : ''
 
 /**
- * 把后端返回的相对资源路径（如 /roles/yingxue/asset/logo.png）接到资源域名。
- * 已是 http(s) / data: 则原样返回。
+ * 相对路径 /roles/... 在跨域时接到后端源站；本地保持相对路径。
  */
 function resolveAssetUrl(src) {
   const s = String(src || '').trim()
