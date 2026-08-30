@@ -1,0 +1,22 @@
+# runtime
+.runtime/
+.DS_Store
+
+# deps
+node_modules/
+
+# local env
+.env
+.env.local
+*.local.php
+
+# 会话/鉴权运行时数据（角色 cache/ 是问题内容资产，可入库）
+backend/data/session_cache/
+backend/data/tokens/
+backend/data/sessions/
+
+# MD 写入产生的备份
+*.md.bak
+
+# 旧版单体赢学目录（仅根路径；勿忽略 backend/roles/yingxue）
+/yingxue/

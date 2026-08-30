@@ -1,0 +1,22 @@
+.role-avatar {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  overflow: hidden;
+  border-radius: 12px;
+  color: #1a1205;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.role-avatar--img {
+  background: #1c2029 !important;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.role-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

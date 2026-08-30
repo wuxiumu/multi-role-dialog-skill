@@ -1,0 +1,9 @@
+# 忽略运行时与本地密钥
+data/tokens/*
+!data/tokens/.gitkeep
+data/sessions/*
+!data/sessions/.gitkeep
+config/settings.json
+config/config.local.php
+*.bak
+*.tmp.*

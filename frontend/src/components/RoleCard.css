@@ -1,0 +1,120 @@
+.role-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: linear-gradient(165deg, rgba(28, 32, 41, 0.95), rgba(20, 23, 30, 0.9));
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.03) inset;
+  transition: border-color 0.2s, transform 0.2s, background 0.2s;
+  animation: fade-up 0.45s ease both;
+  min-height: 188px;
+}
+
+.role-card:hover {
+  border-color: rgba(255, 182, 77, 0.45);
+  transform: translateY(-3px);
+  background: var(--panel-hover);
+}
+
+.role-card--featured {
+  border-color: rgba(255, 182, 77, 0.28);
+}
+
+.role-card__head {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.role-card__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  flex: none;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--brand-ink);
+}
+
+.role-card__meta {
+  min-width: 0;
+  flex: 1;
+}
+
+.role-card__title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.role-card__title-row h3 {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.role-card__cat {
+  font-size: 11px;
+  color: var(--brand);
+  border: 1px solid rgba(255, 182, 77, 0.35);
+  border-radius: 999px;
+  padding: 1px 8px;
+}
+
+.role-card__tagline {
+  margin-top: 4px;
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.role-card__desc {
+  font-size: 13px;
+  color: #c5cad3;
+  line-height: 1.55;
+  flex: 1;
+}
+
+.role-card__foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 4px;
+}
+
+.role-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  min-width: 0;
+}
+
+.role-card__tags span {
+  font-size: 11px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line-soft);
+  border-radius: 6px;
+  padding: 2px 7px;
+}
+
+.role-card__cta {
+  flex: none;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--brand);
+  opacity: 0.85;
+  transition: opacity 0.15s, transform 0.15s;
+}
+
+.role-card:hover .role-card__cta {
+  opacity: 1;
+  transform: translateX(2px);
+}

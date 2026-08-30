@@ -1,0 +1,121 @@
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(27, 31, 40, 0.92), rgba(23, 26, 33, 0.88));
+  backdrop-filter: blur(12px);
+}
+
+.topbar__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.brand__logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 17px;
+  color: var(--brand-ink);
+  background: linear-gradient(135deg, var(--brand), var(--brand2));
+}
+
+.brand__text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  line-height: 1.15;
+}
+
+.brand__text strong {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.brand__text em {
+  font-style: normal;
+  font-size: 11px;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.topbar__nav {
+  display: flex;
+  gap: 4px;
+  margin-left: 8px;
+}
+
+.topbar__nav a {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  color: var(--muted);
+  transition: color 0.15s, background 0.15s;
+}
+
+.topbar__nav a:hover {
+  color: var(--ink);
+}
+
+.topbar__nav a.on {
+  color: var(--brand-ink);
+  background: linear-gradient(135deg, var(--brand), var(--brand2));
+  font-weight: 600;
+}
+
+.topbar__actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.topbar__user {
+  font-size: 12px;
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.topbar__user:hover {
+  color: var(--ink);
+}
+
+.topbar__model {
+  font-size: 10px;
+  font-weight: 600;
+  color: #1a1008;
+  background: var(--brand);
+  border-radius: 999px;
+  padding: 1px 7px;
+}
+
+@media (max-width: 640px) {
+  .brand__text em,
+  .topbar__nav {
+    display: none;
+  }
+}

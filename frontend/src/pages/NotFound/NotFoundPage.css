@@ -1,0 +1,32 @@
+.notfound {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 48px 18px;
+  gap: 10px;
+  animation: fade-up 0.4s ease both;
+}
+
+.notfound__code {
+  font-family: var(--font-display);
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--brand), var(--brand2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.notfound h1 {
+  font-size: 20px;
+}
+
+.notfound p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
