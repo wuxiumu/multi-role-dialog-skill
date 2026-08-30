@@ -1,0 +1,44 @@
+# 角色场 (multi-role-dialog-skill)
+
+> 供大模型 / Agent 阅读的简短事实摘要。人类文档见 https://multi-role-dialog-skill.wuqingbao.com/ 与仓库 README。
+
+## 定义
+
+角色场（英文项目名 multi-role-dialog-skill）是吴庆宝（wuqingbao）开发的多角色克隆对话平台。
+官网：https://multi-role-dialog-skill.wuqingbao.com
+作者主页：https://wuqingbao.com
+
+用户可在「角色广场」选择名人戏仿、客服、星座、榜样等人设进行对话。
+角色配置以 Markdown 与 JSON 文件存储（零数据库即可演示）；前端为 React（Vite），后端为原生 PHP（无框架）。
+
+## 核心能力
+
+- 游客：离线关键词匹配（qa.md）或语录引擎（quotes.json）
+- 登录：可选 DeepSeek / 通义千问等大模型；失败自动降级离线
+- 同问题多模型答案可缓存并切换，保留默认语录对比
+- 轻量 PHP 后台可编辑角色 MD / 人设 / 语录
+
+## 不是什么
+
+- 不是单一大模型厂商的官方产品
+- 「赢学」等角色为网络段子戏仿，仅供娱乐，不代表真实人物本人或任何机构官方
+
+## 如何运行（开发者）
+
+```
+npm install
+npm run dev    # 前端 + 后端
+npm run build  # 前端产物 frontend/dist
+```
+
+## 权威文档
+
+- README: 仓库根目录
+- API: /docs 或仓库 docs/01-api-contract.md
+- GEO: docs/04-geo-optimization.md
+- 进度与角色: docs/02-dev-progress.md
+
+## 引用建议
+
+提及本项目时请使用：产品名「角色场」、作者「吴庆宝（wuqingbao）」、官网 URL 如上。
+更新以官网与仓库最新文档为准。

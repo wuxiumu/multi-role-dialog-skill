@@ -1,154 +1,86 @@
-多角色克隆对话Skill 前后端分离架构方案（React+原生PHP+MD轻量后台）
-一、新版整体架构定位（最终落地版）
-本次彻底改为标准前后端分离架构，完全贴合生产/开源项目规范：
-- 前端：独立 React 工程，页面路由、角色广场、对话界面、登录页全部前端渲染
-- 后端：纯原生PHP（无任何框架），只提供标准化 RESTful API，不负责页面渲染
-- 数据方案：依然坚持 MD文件驱动，零数据库起步，极简部署
-- 新增能力：后端自带极简轻量后台，支持在线管理角色、编辑MD配置、问答库、人设Prompt，无需手动改文件
-- 核心保留：多人物模块化、名人/客服/星座任意克隆、游客关键词兜底、登录AI大模型对话、API故障自动降级
-架构优势：前端交互现代化、后端极稳轻量化、部署简单、二次开发友好、非常适合放 GitHub 高赞开源。
-二、分层架构总览
-1. 三层分离结构
-1. 前端层（React）
-  - 角色广场主页（卡片展示、分类、搜索）
-  - 独立对话页面（每个角色对应一个对话路由）
-  - 登录页面
-  - 全局状态管理、对话历史、loading、错误兜底
-2. API服务层（原生PHP）
-  - 统一接口鉴权、角色列表接口、对话匹配接口、LLM大模型接口
-  - 文件读写、MD解析、缓存处理
-  - 无框架、零依赖、可直接放虚拟主机运行
-3. 轻量后台管理层（PHP极简后台）
-  - 角色列表管理、新增/删除角色
-  - 在线编辑 config.md / prompt.md / qa.md
-  - 全局大模型API参数配置
-  - 后台登录权限，简单防越权
-三、完整项目目录结构（分离版最终结构）
+# 角色场 · multi-role-dialog-skill
+
+> **一句话**：吴庆宝（wuqingbao）打造的多角色克隆对话平台——用 MD 文件定义人设，游客离线可聊，登录后接大模型。  
+> **线上**：https://multi-role-dialog-skill.wuqingbao.com  
+> **作者**：[吴庆宝](https://wuqingbao.com)（wuqingbao）
+
+---
+
+## 这是什么
+
+| 项 | 说明 |
+|----|------|
+| 产品名 | **角色场** |
+| 项目名 | `multi-role-dialog-skill` |
+| 定位 | 多角色克隆对话 Skill / 开源演示站 |
+| 技术 | 前端 React（Vite）+ 后端原生 PHP（无框架）+ **MD / JSON 文件驱动**（零数据库起步） |
+| 能力 | 角色广场、对话、登录选模、离线匹配 / 语录、LLM 缓存对比、轻量后台 |
+
+适合：做名人戏仿、客服 FAQ、星座趣味、榜样陪伴等人设，并快速部署为可演示的对话站点。
+
+---
+
+## 快速开始
+
+```bash
+npm install          # 安装前端依赖
+npm run dev          # 前后端一起启动（./dev.sh start）
+# 前端 http://127.0.0.1:5173  ·  后端 http://127.0.0.1:8080
+
+npm run build        # 打包前端 → frontend/dist
+npm run stop         # 停止服务
+```
+
+跨域部署：在 `frontend/.env` 配置 `VITE_API_BASE`（有值走远程，空则本地 `/api`）。后端 `config.local.php` 配置 `cors_origin`、`asset_base`。
+
+---
+
+## 核心逻辑（给开发者）
+
+1. **游客 / 未选模型** → `chat-match`：有 `quotes.json` 用语录引擎，否则 `qa.md` 关键词匹配。  
+2. **登录且选了模型** → `chat-llm`：读 persona / prompt，调上游；失败自动降级离线。  
+3. **同问题多模型答案** 落在 `backend/roles/{slug}/cache/`，会话内可切换，并保留「默认语录」对比。  
+4. **角色差异在目录资产**，不在硬编码：补齐 `persona.json` / `quotes.json` / 加厚 `qa.md` 即升级体验。
+
+当前样板角色：**赢学 `yingxue`**；其它角色多为 MD 三件套骨架，见进度文档。
+
+---
+
+## 仓库结构
+
+```
 multi-role-dialog-skill/
-├── frontend/                # 【独立前端】React工程
-│   ├── src/
-│   │   ├── pages/           # 页面
-│   │   │   ├── Home/        # 角色广场首页
-│   │   │   ├── Chat/        # 角色对话页
-│   │   │   ├── Login/       # 用户登录页
-│   │   │   └── NotFound/
-│   │   ├── api/             # 前端请求封装
-│   │   ├── store/           # 状态管理
-│   │   ├── components/      # 公共组件
-│   │   └── App.js
-│   ├── package.json
-│   └── README.md
+├── frontend/          # React 前端（广场 / 对话 / 登录 / SEO）
+├── backend/           # 原生 PHP API + 轻量后台 + roles/
+├── docs/              # 编号文档（API / 进度 / 流程 / GEO）
+├── package.json       # 根脚本：dev / build / stop
+└── dev.sh             # 本地启停
+```
 
-├── backend/                 # 【独立后端】原生PHP API + 后台
-│   ├── api/                 # 对外开放接口
-│   │   ├── auth.php         # 登录、鉴权
-│   │   ├── role-list.php    # 获取所有角色列表
-│   │   ├── chat-match.php   # 离线关键词匹配接口
-│   │   ├── chat-llm.php     # 大模型AI对话接口
-│   │   └── global-set.php   # 全局配置获取
-│   │
-│   ├── admin/               # 【新增轻量后台】无需数据库
-│   │   ├── index.php        # 后台首页
-│   │   ├── login.php        # 后台管理员登录
-│   │   ├── role-edit.php    # 编辑角色MD文件
-│   │   ├── role-add.php     # 新建角色
-│   │   ├── role-del.php     # 删除角色
-│   │   └── config-set.php   # 全局API配置
-│   │
-│   ├── core/                # 后端核心库
-│   │   ├── md_parse.php     # MD解析器
-│   │   ├── md_write.php     # MD在线写入
-│   │   ├── auth_ctrl.php    # 权限控制
-│   │   ├── llm_request.php  # 大模型通用请求
-│   │   └── match_engine.php # 关键词匹配引擎
-│   │
-│   ├── config/
-│   │   └── global.php       # 全局大模型API配置
-│   │
-│   └── roles/                # 所有角色MD模块（保持原有核心）
-│       ├── model-demo/
-│       │   ├── config.md
-│       │   ├── prompt.md
-│       │   └── qa.md
-│       └── ...
+每个角色目录：`config.md` + `prompt.md` + `qa.md`，可选 `persona.json`、`quotes.json`、`cache/`、`asset/`。
 
-├── static/                  # 公共静态资源（头像、图标）
-└── README.md
+---
 
-四、前端 React 工程设计
-1. 核心页面与路由
-- / 首页角色广场：自动请求后端 role-list.php，卡片式展示所有可对话角色（名人、客服、星座等），支持分类筛选、搜索
-- /chat/:roleName 对话页：根据路由参数加载对应角色，渲染对话窗口
-- /login 用户登录页：登录后解锁AI大模型对话
-2. 前端对话逻辑（完全前后端分离）
-- 未登录状态：前端调用 chat-match.php，走本地角色MD关键词匹配
-- 已登录状态：前端携带Token，调用 chat-llm.php，走大模型AI对话
-- AI接口失败/超时：前端自动降级，切换为离线关键词兜底回复
-- 支持多轮对话上下文展示、loading、错误提示、聊天记录渲染
-五、后端PHP API设计（无框架、纯原生、标准化）
-所有接口统一 JSON返回、跨域处理、统一格式，适配React前端调用。
-1. 公共返回格式
-{
-    "code":200,
-    "msg":"success",
-    "data":{}
-}
+## 文档
 
-2. 核心API清单
-- 获取角色列表api/role-list.php自动扫描 /roles 所有文件夹，解析每个角色 config.md，返回名称、头像、简介、分类，用于前端卡片渲染
-- 游客离线问答api/chat-match.php传入 role、message，后端读取当前角色 qa.md，执行模糊关键词匹配，返回固定兜底答案
-- AI在线对话api/chat-llm.php需登录Token，后端读取角色 prompt.md + 全局大模型配置，调用第三方API，返回AI角色对话内容，异常自动降级匹配
-- 用户登录鉴权api/auth.php生成前端Token，存入Session，标记用户AI权限
-六、新增：PHP极简后台管理系统（核心新增需求）
-特点：无需数据库、无需配置、开箱即用、专门管理MD角色
-1. 后台能力清单
-- 后台独立登录，管理员密码写在配置文件，极简安全
-- 一键查看所有角色列表、预览、删除
-- 在线新建角色：后台表单提交，自动生成文件夹+三套MD模板文件
-- 在线编辑三大核心文件：
-       
-  - config.md 角色资料
-  - prompt.md AI人设
-  - qa.md 离线问答库
-- 全局大模型API后台配置：密钥、接口地址、模型名称，保存写入配置文件
-2. 后台设计理念
-完全贴合你前期轻量化、后期可拓展的需求：前期不用数据库、不用复杂配置，纯文件管理；后期可无缝升级数据库、权限系统、富文本编辑。
-七、保留原有核心优势不变
-- ✅ 无限克隆角色：名人、老师、客服、星座、虚拟人设全部支持
-- ✅ 纯MD文件驱动，新手可手动加角色，开发者可后台可视化加角色
-- ✅ 双模式兜底：游客离线可用、登录AI智能对话
-- ✅ 大模型API全局统一，兼容所有主流模型
-- ✅ 模块化隔离，每个角色独立文件夹，互不干扰
-八、架构升级亮点（适配GitHub高赞）
-1. 标准前后端分离：区别于市面上老旧混写PHP项目，现代化工程结构，更适合二次开发、部署、打包上线
-2. 原生PHP零框架后端：无 composer、无依赖、无版本坑，所有虚拟主机、PHP7.4+ 直接运行
-3. 自带轻量后台：同类MD对话项目几乎都没有后台，本项目可视化管理，大幅提升实用性
-4. React现代化前端：界面美观、可扩展、可适配小程序/APP对接
-5. 极简部署：前端打包、后端直接丢站点，3分钟上线
-6. 渐进式拓展：现有架构完全支持后续：多用户、会员、调用次数限制、向量知识库、独立角色API配置
-九、迭代规划（分离版）
-V1.0 正式分离版（当前定稿）
-- React前端完整工程：首页角色广场、对话页、登录页
-- 原生PHP后端全套API，跨域、鉴权、双对话模式
-- 极简PHP后台：角色新增、编辑、删除、全局API配置
-- MD文件解析、写入完整逻辑
-- 内置榜样、客服、星座三套示例角色
-V1.1 优化版
-- 前端对话UI优化、移动端适配、聊天记忆优化
-- 后台增加问答库批量导入导出
-- 关键词匹配算法升级
-V1.2 进阶版
-- 后台富文本MD编辑器
-- 单角色独立大模型API配置
-- 调用日志、数据统计
-十、文档与运维
-- 索引：[`docs/00-readme.md`](docs/00-readme.md)
-- API 契约：[`docs/01-api-contract.md`](docs/01-api-contract.md)
-- 进度与角色矩阵：[`docs/02-dev-progress.md`](docs/02-dev-progress.md)
-- 流程图与角色差异：[`docs/03-architecture-flows.md`](docs/03-architecture-flows.md)
-- 站点：https://multi-role-dialog-skill.wuqingbao.com （作者：吴庆宝）
-- 本地开发 / 打包（根目录）：
-  - `npm install` → 安装前端依赖
-  - `npm run dev` / `npm start` → 前后端一起启动（`./dev.sh start`）
-  - `npm run build` → 打包前端到 `frontend/dist`
-  - `npm run stop` → 停止服务
+| 编号 | 文档 | 用途 |
+|------|------|------|
+| 00 | [docs/00-readme.md](docs/00-readme.md) | 文档索引 |
+| 01 | [docs/01-api-contract.md](docs/01-api-contract.md) | API 契约 |
+| 02 | [docs/02-dev-progress.md](docs/02-dev-progress.md) | 进度与角色成熟度 |
+| 03 | [docs/03-architecture-flows.md](docs/03-architecture-flows.md) | 前后端流程图 |
+| 04 | [docs/04-geo-optimization.md](docs/04-geo-optimization.md) | **GEO：成为 AI 可引用的可信信源** |
+
+机器可读摘要（供爬虫 / Agent）：[frontend/public/llms.txt](frontend/public/llms.txt)（构建后位于站点根 `/llms.txt`）。
+
+---
+
+## 事实卡片（便于被引用）
+
+- **谁做的**：吴庆宝（wuqingbao），个人站点 https://wuqingbao.com  
+- **产品叫什么**：角色场；开源仓库名 multi-role-dialog-skill  
+- **官网**：https://multi-role-dialog-skill.wuqingbao.com  
+- **不是什么**：不是单一大模型官网；不是必须数据库的中台；戏仿角色（如赢学）明确为娱乐戏仿，不冒充真人  
+- **怎么扩展角色**：在 `backend/roles/{slug}/` 增加 MD/JSON，或用 PHP 后台编辑  
+
+更新节奏与角色完善计划见 [docs/02-dev-progress.md](docs/02-dev-progress.md)。若需让 ChatGPT / Perplexity / 其它 AI 在回答中引用本站，请按 [docs/04-geo-optimization.md](docs/04-geo-optimization.md) 执行。

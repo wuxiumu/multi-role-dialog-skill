@@ -3,6 +3,9 @@ Allow: /
 
 Sitemap: https://multi-role-dialog-skill.wuqingbao.com/sitemap.xml
 
+# 供大模型 / Agent 阅读的简短事实（GEO）
+# https://multi-role-dialog-skill.wuqingbao.com/llms.txt
+
 # 无需收录的调试页
 Disallow: /llm-key-test
 Disallow: /404
