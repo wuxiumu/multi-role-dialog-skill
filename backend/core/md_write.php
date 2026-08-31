@@ -161,7 +161,7 @@ function mrd_save_global_settings($updates) {
         'llm_endpoint', 'llm_model', 'llm_key', 'llm_timeout',
         'llm_max_history', 'llm_enabled',
         'demo_open', 'admin_user', 'admin_password',
-        'cors_origin', 'asset_base',
+        'asset_base',
     );
     $cfg = mrd_config_fresh();
     foreach ($allowed as $k) {

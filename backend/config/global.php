@@ -48,7 +48,8 @@ $cfg = array(
     'admin_password'  => 'admin123',  // 生产务必修改
     'admin_session'   => 'mrd_admin',
 
-    // CORS
+    // CORS 由 nginx 管理；PHP mrd_cors() 不再输出 Access-Control-*（避免双头）
+    // 保留字段仅兼容旧 settings.json，无实际效果
     'cors_origin'     => '*',
 
     // 角色静态资源前缀：空=走当前后端同源 /roles/{slug}/asset/

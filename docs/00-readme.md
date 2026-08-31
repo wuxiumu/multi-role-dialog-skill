@@ -13,6 +13,6 @@
 
 产品总方案见仓库根目录 [`README.md`](../README.md)。本地：`npm run dev`（或 `./dev.sh start`）。
 
-跨域：`frontend/.env` 的 `VITE_API_BASE`（有值走远程，空则 `/api`）；后端 `cors_origin` / `asset_base`。
+跨域：`frontend/.env` 的 `VITE_API_BASE`（有值走远程，空则 `/api`）；CORS 由 nginx 配置；可选 `asset_base`。
 
 机器摘要：站点 `/llms.txt`（源文件 [`frontend/public/llms.txt`](../frontend/public/llms.txt)）。

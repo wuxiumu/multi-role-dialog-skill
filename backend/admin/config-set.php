@@ -21,7 +21,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'llm_enabled' => !empty($_POST['llm_enabled']),
         'demo_open' => !empty($_POST['demo_open']),
         'admin_user' => isset($_POST['admin_user']) ? trim((string)$_POST['admin_user']) : 'admin',
-        'cors_origin' => isset($_POST['cors_origin']) ? trim((string)$_POST['cors_origin']) : '*',
         'asset_base' => isset($_POST['asset_base']) ? trim((string)$_POST['asset_base']) : '',
     );
     // 密钥：留空表示不改；填 **** 忽略
@@ -61,11 +60,9 @@ admin_layout_start('全局配置', 'config-set.php');
   <input name="site_tagline" value="<?php echo admin_h(isset($cfg['site_tagline']) ? $cfg['site_tagline'] : ''); ?>">
   <label>免责声明</label>
   <input name="disclaimer" value="<?php echo admin_h(isset($cfg['disclaimer']) ? $cfg['disclaimer'] : ''); ?>">
-  <label>CORS Origin</label>
-  <input name="cors_origin" value="<?php echo admin_h(isset($cfg['cors_origin']) ? $cfg['cors_origin'] : '*'); ?>">
   <label>资源 CDN / Asset Base（可选）</label>
   <input name="asset_base" value="<?php echo admin_h(isset($cfg['asset_base']) ? $cfg['asset_base'] : ''); ?>" placeholder="空=同源 /roles/... ；或 https://cdn.example.com">
-  <p class="muted">角色本地图放在 <code>roles/{slug}/asset/</code>；config.md 用 <code>avatarImage: logo.png</code> 或 <code>avatarCdn: https://...</code>。</p>
+  <p class="muted">跨域请在 nginx 配置 <code>Access-Control-*</code>（PHP 不再设 CORS 头）。角色本地图放在 <code>roles/{slug}/asset/</code>；config.md 用 <code>avatarImage: logo.png</code> 或 <code>avatarCdn: https://...</code>。</p>
 
   <h2 style="font-size:1rem;margin:1.25rem 0 .5rem">大模型（OpenAI 兼容）</h2>
   <label><input type="checkbox" name="llm_enabled" value="1" <?php echo !empty($cfg['llm_enabled']) ? 'checked' : ''; ?>> 启用 LLM</label>

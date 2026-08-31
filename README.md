@@ -31,7 +31,7 @@ npm run build        # 打包前端 → frontend/dist
 npm run stop         # 停止服务
 ```
 
-跨域部署：在 `frontend/.env` 配置 `VITE_API_BASE`（有值走远程，空则本地 `/api`）。后端 `config.local.php` 配置 `cors_origin`、`asset_base`。
+跨域部署：在 `frontend/.env` 配置 `VITE_API_BASE`（有值走远程，空则本地 `/api`）。CORS 由 nginx 统一配置；可选 `asset_base` 指定角色静态资源 CDN。
 
 ---
 

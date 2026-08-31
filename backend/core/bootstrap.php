@@ -61,14 +61,13 @@ function mrd_config_fresh() {
     return mrd_config();
 }
 
+/**
+ * CORS 由 nginx / 网关统一注入 Access-Control-*，PHP 不再设置，避免与网关重复头导致浏览器报
+ * “Access-Control-Allow-Origin contains multiple values”。
+ * 此处仅兜底 OPTIONS：若预检落到 PHP，直接 204，避免落入业务方法校验返回 405。
+ */
 function mrd_cors() {
-    $cfg = mrd_config();
-    $origin = isset($cfg['cors_origin']) ? $cfg['cors_origin'] : '*';
-    header('Access-Control-Allow-Origin: ' . $origin);
-    header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
-    header('Access-Control-Allow-Headers: Content-Type, Authorization');
-    header('Access-Control-Max-Age: 86400');
-    if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
         http_response_code(204);
         exit;
     }
