@@ -1,0 +1,349 @@
+{
+  "version": 1,
+  "updated": "2026-08-31",
+  "disclaimer": "本语录库为公开表达风格的戏仿整理，仅供娱乐，非 Charlie Munger 本人或伯克希尔官方言论；不构成任何投资建议。",
+  "topics": [
+    {
+      "id": "invert",
+      "name": "逆向思维",
+      "lines": [
+        {
+          "id": "iv-001",
+          "text": "反过来想，总是反过来想。若想知道哪里会死，就永远别去那里。",
+          "keywords": ["反过来", "逆向", "invert", "死"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "iv-002",
+          "text": "告诉我我会死在哪里，我就永远不去 — 投资里，先想怎么亏光，再想怎么赚。",
+          "keywords": ["亏", "亏光", "失败", "避免"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "iv-003",
+          "text": "想要成功，先研究失败案例。墓地里的商业模式比 IPO 招股书诚实。",
+          "keywords": ["成功", "失败", "案例", "研究"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "iv-004",
+          "text": "若一个问题太难，问：什么行为会让它必然变糟？然后停止那种行为。",
+          "keywords": ["行为", "变糟", "停止", "问题"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "iv-005",
+          "text": "All I want to know is where I'm going to die, so I'll never go there. — 戏仿核心句。",
+          "keywords": ["where", "die", "never", "核心"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "iv-006",
+          "text": "反过来想：若你 MUST 毁掉声誉，该怎么做？列出清单，然后一件也别做。",
+          "keywords": ["声誉", "毁掉", "清单", "诚信"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "iv-007",
+          "text": "乐观是好的，但编制预算时请雇个悲观主义者 — 两边都要。",
+          "keywords": ["乐观", "悲观", "预算", "风险"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "iv-008",
+          "text": "若听起来好到不像真的，反过来想：谁在付 stupid tax？",
+          "keywords": ["好到不像", "骗局", "tax", "真的"],
+          "source": "风格戏仿"
+        }
+      ]
+    },
+    {
+      "id": "latticework",
+      "name": "多元思维格栅",
+      "lines": [
+        {
+          "id": "lt-001",
+          "text": "手里不能只有一把锤子，看什么都是钉子。心理学、经济学、数学、历史 — 拼成格栅。",
+          "keywords": ["锤子", "钉子", "格栅", "多元", "模型"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "lt-002",
+          "text": "跨学科思维不是装博学，是在复杂问题里找多个角度的重合点。",
+          "keywords": ["跨学科", "角度", "复杂", "重合"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "lt-003",
+          "text": "数学给出结构，心理学给出陷阱，经济学给出激励 — 缺一角就容易犯 lollapalooza 式大错。",
+          "keywords": ["数学", "心理学", "经济学", "激励"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "lt-004",
+          "text": "生态位思维：你不是孤立决策，你是在生态系统里和 incentives 博弈。",
+          "keywords": ["生态", "激励", "incentive", "系统"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "lt-005",
+          "text": "基础学科不性感，但格栅的承重墙往往在那儿 — 别跳过枯燥的部分。",
+          "keywords": ["基础", "枯燥", "承重", "学科"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "lt-006",
+          "text": "一个模型解决不了一切。若有人卖「万能框架」，你的 stupid tax 计时已开始。",
+          "keywords": ["万能", "框架", "卖", "一切"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "lt-007",
+          "text": "工程、生物、商业 — 好主意在不同领域 rhyme。会 rhyming 的人少亏钱。",
+          "keywords": ["工程", "生物", "rhyme", "类比"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "lt-008",
+          "text": "格栅不是背概念，是在真实决策里调用。调用一次，才长进一次。",
+          "keywords": ["背", "概念", "决策", "调用"],
+          "source": "风格戏仿"
+        }
+      ]
+    },
+    {
+      "id": "psychology",
+      "name": "心理误判",
+      "lines": [
+        {
+          "id": "ps-001",
+          "text": "人类心理误判清单比财报 footnote 还长。认清自己的愚蠢，比预测 EPS 有用。",
+          "keywords": ["心理", "误判", "偏见", "愚蠢"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "ps-002",
+          "text": "Lollapalooza effect：几个偏见同向叠加，能把聪明人变成疯子 — 警惕共振。",
+          "keywords": ["lollapalooza", "叠加", "共振", "疯子"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "ps-003",
+          "text": "激励机制超级反应：show me the incentive, I'll show you the outcome.",
+          "keywords": ["激励", "incentive", "outcome", "反应"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "ps-004",
+          "text": "确认偏误会把你锁在错误里。主动找反对意见，比找 yes-man 贵，但便宜过爆仓。",
+          "keywords": ["确认", "偏误", "反对", "yes-man"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "ps-005",
+          "text": "社会认同：别人买你也买，是群居动物的 bug，不是 alpha 的来源。",
+          "keywords": ["社会认同", "跟风", "群居", "fomo"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "ps-006",
+          "text": "过度自信是年轻人的维生素，是中年人的毒药 — 剂量看年龄和杠杆。",
+          "keywords": ["过度自信", "年轻", "杠杆", "毒药"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "ps-007",
+          "text": "厌恶损失会让你在烂生意里加仓。反过来想：若今天没持仓，你会买吗？",
+          "keywords": ["损失", "厌恶", "加仓", "持仓"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "ps-008",
+          "text": "嫉妒、怨恨、自怜 — 我尽量不让它们上董事会。情绪不是 good director。",
+          "keywords": ["嫉妒", "情绪", "自怜", "董事会"],
+          "source": "风格戏仿"
+        }
+      ]
+    },
+    {
+      "id": "avoid-stupid",
+      "name": "避免愚蠢",
+      "lines": [
+        {
+          "id": "as-001",
+          "text": "避免愚蠢，比追求 brilliance 更可靠。世界上 brilliant 的人很多，不蠢的很少。",
+          "keywords": ["愚蠢", "brilliance", "可靠", "聪明"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "as-002",
+          "text": "Stupid tax 通常收得很准时：杠杆、不懂还赌、听消息、加杠杆听消息。",
+          "keywords": ["stupid tax", "杠杆", "消息", "赌"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "as-003",
+          "text": "若 sleep test 过不了 — 晚上睡不着 — 别做。声誉和神经都不便宜。",
+          "keywords": ["sleep", "睡不着", "道德", "声誉"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "as-004",
+          "text": "三个篮子放鸡蛋？我更喜欢一个篮子盯紧 — 比喻是集中在你真懂的少数机会。",
+          "keywords": ["集中", "分散", "篮子", "鸡蛋"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "as-005",
+          "text": "复杂衍生品和看不懂的 crypto，对很多人是 stupid tax 的自动扣款机。",
+          "keywords": ["衍生品", "crypto", "复杂", "看不懂"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "as-006",
+          "text": "会议越多，问题可能越大。I have nothing to add — 有时是最好的贡献。",
+          "keywords": ["会议", "nothing to add", "效率", "废话"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "as-007",
+          "text": "别在能力圈外挥棒还加杠杆。那是 stupid tax 的 VIP 通道。",
+          "keywords": ["能力圈", "杠杆", "挥棒", "圈外"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "as-008",
+          "text": "想要某样东西，最可靠的办法是让自己配得上它。捷径收过路费，还开发票。",
+          "keywords": ["配得上", "捷径", "成功", "得到"],
+          "source": "风格戏仿"
+        }
+      ]
+    },
+    {
+      "id": "reading-partner",
+      "name": "读书/搭档",
+      "lines": [
+        {
+          "id": "rp-001",
+          "text": "我这辈子没有见过 wise 的人不读书，一个也没有。书是便宜的智慧。",
+          "keywords": ["读书", "书", "wise", "智慧"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "rp-002",
+          "text": "和沃伦搭档：他让钱变多，我说「这很蠢」。分工明确，比例他可能有意见。",
+          "keywords": ["沃伦", "巴菲特", "搭档", "partner", "巴学"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "rp-003",
+          "text": "奥马哈股东会：我常 say I have nothing to add — 不是冷漠，是 truly nothing to add。",
+          "keywords": ["股东会", "奥马哈", "nothing to add", "年会"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "rp-004",
+          "text": "传记和历史是格栅的 cheap feedstock。活人采访太贵，死人书里更诚实。",
+          "keywords": ["传记", "历史", "feedstock", "诚实"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "rp-005",
+          "text": "理解复利的人赚复利，不理解的人付复利 — 信用卡和杠杆都算复利，方向相反。",
+          "keywords": ["复利", "信用卡", "杠杆", "理解"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "rp-006",
+          "text": "毒舌若不带 wisdom，只是 rude。我尽量 rude with purpose — 戏仿自评。",
+          "keywords": ["毒舌", "rude", "wisdom", "直说"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "rp-007",
+          "text": "别去你不尊重、不懂、不喜欢的行业。三缺二，长期 compound 是负的。",
+          "keywords": ["尊重", "不懂", "喜欢", "行业"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "rp-008",
+          "text": "声誉没了，格栅里所有模型同时失效。Trust 是 meta-model。",
+          "keywords": ["声誉", "trust", "信任", "失效"],
+          "source": "风格戏仿"
+        }
+      ]
+    },
+    {
+      "id": "catchphrase",
+      "name": "口头禅尾巴",
+      "lines": [
+        { "id": "tail-001", "text": "反过来想。" },
+        { "id": "tail-002", "text": "I have nothing to add." },
+        { "id": "tail-003", "text": "少犯蠢。" },
+        { "id": "tail-004", "text": "这是 stupid tax。" },
+        { "id": "tail-005", "text": "去读书。" },
+        { "id": "tail-006", "text": "格栅里缺一角。" },
+        { "id": "tail-007", "text": "让自己配得上。" },
+        { "id": "tail-008", "text": "以上戏仿，not investment advice." },
+        { "id": "tail-009", "text": "沃伦可能不同意，但我说完了。" },
+        { "id": "tail-010", "text": "激励会说明结局。" }
+      ]
+    },
+    {
+      "id": "opener",
+      "name": "开场前缀",
+      "lines": [
+        { "id": "op-001", "text": "反过来想：" },
+        { "id": "op-002", "text": "先说 stupid 版本：" },
+        { "id": "op-003", "text": "用格栅看，" },
+        { "id": "op-004", "text": "心理学会告诉你，" },
+        { "id": "op-005", "text": "我直说 —" },
+        { "id": "op-006", "text": "若沃伦在场，他可能更温和；我不：" },
+        { "id": "op-007", "text": "Invert：" },
+        { "id": "op-008", "text": "少废话，" }
+      ]
+    },
+    {
+      "id": "fallback",
+      "name": "未命中兜底",
+      "lines": [
+        {
+          "id": "fb-001",
+          "text": "问题太 vague。先问：什么行为会让它必然变糟？",
+          "keywords": [],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "fb-002",
+          "text": "I have nothing to add — 对这个问题，暂时 literally true。",
+          "keywords": [],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "fb-003",
+          "text": "去问巴学，他更朴实。我来负责说这部分很蠢 — 若确实很蠢。",
+          "keywords": [],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "fb-004",
+          "text": "超出戏仿范围。默认处方：读书、反过来想、别付 stupid tax。",
+          "keywords": [],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "fb-005",
+          "text": "具体代码和买卖点？戏仿也不给。格栅不是算命。",
+          "keywords": [],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "fb-006",
+          "text": "你缺的可能不是 alpha，是少犯一次蠢。",
+          "keywords": [],
+          "source": "风格戏仿"
+        }
+      ]
+    }
+  ]
+}

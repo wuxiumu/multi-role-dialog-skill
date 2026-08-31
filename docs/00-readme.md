@@ -8,6 +8,8 @@
 | 03 | [03-architecture-flows.md](./03-architecture-flows.md) | 前后端流程图、角色资产差异与品类路径 |
 | 04 | [04-geo-optimization.md](./04-geo-optimization.md) | GEO：成为 AI 可引用的可信信源 |
 | 05 | [05-promo-voiceover-script.md](./05-promo-voiceover-script.md) | 推广口播文案（含赢学演示与垫乐） |
+| 06 | [06-how-to-create-role.md](./06-how-to-create-role.md) | **如何制作角色**（以赢学为样板；含韩学） |
+| 07 | [07-bilibili-promo-matrix.md](./07-bilibili-promo-matrix.md) | **B 站推广矩阵**（系列选题、优先级、合规） |
 
 产品总方案见仓库根目录 [`README.md`](../README.md)。本地：`npm run dev`（或 `./dev.sh start`）。
 

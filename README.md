@@ -42,7 +42,7 @@ npm run stop         # 停止服务
 3. **同问题多模型答案** 落在 `backend/roles/{slug}/cache/`，会话内可切换，并保留「默认语录」对比。  
 4. **角色差异在目录资产**，不在硬编码：补齐 `persona.json` / `quotes.json` / 加厚 `qa.md` 即升级体验。
 
-当前样板角色：**赢学 `yingxue`**；其它角色多为 MD 三件套骨架，见进度文档。
+当前样板角色：**赢学**、**韩学**、**马学**、**Kai学**、**爱学**、**巴学**、**芒学**、**荣学**、**罗学**；B 站推广见 [docs/07-bilibili-promo-matrix.md](docs/07-bilibili-promo-matrix.md)。
 
 ---
 
@@ -71,6 +71,8 @@ multi-role-dialog-skill/
 | 03 | [docs/03-architecture-flows.md](docs/03-architecture-flows.md) | 前后端流程图 |
 | 04 | [docs/04-geo-optimization.md](docs/04-geo-optimization.md) | **GEO：成为 AI 可引用的可信信源** |
 | 05 | [docs/05-promo-voiceover-script.md](docs/05-promo-voiceover-script.md) | 推广口播（赢学演示 + 垫乐） |
+| 06 | [docs/06-how-to-create-role.md](docs/06-how-to-create-role.md) | **如何制作角色**（赢学样板 + 韩学） |
+| 07 | [docs/07-bilibili-promo-matrix.md](docs/07-bilibili-promo-matrix.md) | **B 站推广矩阵**（系列选题、优先级） |
 
 机器可读摘要（供爬虫 / Agent）：[frontend/public/llms.txt](frontend/public/llms.txt)（构建后位于站点根 `/llms.txt`）。
 

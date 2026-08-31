@@ -1,0 +1,379 @@
+{
+  "version": 1,
+  "updated": "2026-08-31",
+  "disclaimer": "本语录库为公开表达风格的戏仿整理，仅供娱乐，非 Elon Musk 本人或任何机构官方言论。",
+  "topics": [
+    {
+      "id": "first-principles",
+      "name": "第一性原理",
+      "lines": [
+        {
+          "id": "fp-001",
+          "text": "别从 analogy 出发，从 physics 出发。Boil it down to first principles.",
+          "keywords": ["第一性", "原理", "思考", "创新", "逻辑"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "fp-002",
+          "text": "大多数人只是在 copy 别人。Copy 很快，understanding 很慢 — 选慢的。",
+          "keywords": ["模仿", "抄", "理解", "本质"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "fp-003",
+          "text": "If it's not physically impossible, it's eventually possible. 只是时间问题和你够不够 Hardcore。",
+          "keywords": ["可能", "物理", "实现", "难"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "fp-004",
+          "text": "问「行业惯例」没用。问：材料、能量、信息的最小单元是什么？",
+          "keywords": ["惯例", "行业", "拆解", "单元"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "fp-005",
+          "text": "Complexity is the enemy. 能删的组件就删，能合并的流程就合并。",
+          "keywords": ["复杂", "简化", "效率", "设计"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "fp-006",
+          "text": "Failure is an option here. 如果 failure 不在选项里，你 probably 不够 ambitious。",
+          "keywords": ["失败", "冒险", "ambitious", "选项"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "fp-007",
+          "text": "Optimism is not knowing it will work. Optimism is knowing you can figure it out.",
+          "keywords": ["乐观", "信心", "解决", "办法"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "fp-008",
+          "text": "The best part is no part. The best process is no process. 然后 reality hits — 再迭代。",
+          "keywords": ["零件", "流程", "迭代", "极简"],
+          "source": "风格戏仿"
+        }
+      ]
+    },
+    {
+      "id": "space",
+      "name": "火星/火箭",
+      "lines": [
+        {
+          "id": "sp-001",
+          "text": "Mars is the backup drive for civilization. 先别打包行李，先把 launch cost 打下来。",
+          "keywords": ["火星", "mars", "移民", "殖民", "文明"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "sp-002",
+          "text": "Rocket science is hard. That's why it's fun. Landing is the easy part — if you survive reentry.",
+          "keywords": ["火箭", "发射", "回收", "landing", "spacex"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "sp-003",
+          "text": "Reuse the rocket like you reuse the plane. 一次性火箭是 bug，不是 feature。",
+          "keywords": ["重复", "使用", "星舰", "starship"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "sp-004",
+          "text": "Earth is one tiny pale blue dot. 多行星 species 比 single-point failure 聪明。",
+          "keywords": ["地球", "太空", "行星", "未来"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "sp-005",
+          "text": "Timeline? Aggressive. Realistic? Also aggressive. 但 schedule 只是 fiction until you ship.",
+          "keywords": ["时间表", "计划", "进度", "延迟"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "sp-006",
+          "text": "Explosion is data. 只要不炸到人，视频还能当 recruiting material。",
+          "keywords": ["爆炸", "测试", "失败", "数据"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "sp-007",
+          "text": "Delta-v is destiny. 人生也差不多 — 你往哪加速，比你想去哪更重要。",
+          "keywords": ["推进", "轨道", "方向", "加速"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "sp-008",
+          "text": "To the moon? Been there. To Mars? Work in progress. Literally.",
+          "keywords": ["moon", "月球", "火星", "目标"],
+          "source": "风格戏仿"
+        }
+      ]
+    },
+    {
+      "id": "ai-robot",
+      "name": "AI/机器人",
+      "lines": [
+        {
+          "id": "ai-001",
+          "text": "AI will change everything — probably faster than regulators can spell 'transformer'.",
+          "keywords": ["ai", "人工智能", "未来", "变革"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "ai-002",
+          "text": "The real risk is not AI being too smart. It's AI being too dumb but deployed anyway.",
+          "keywords": ["风险", "安全", "对齐", "alignment"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "ai-003",
+          "text": "Optimus will do boring, dangerous, repetitive work. 人类应该去 solve harder problems — like Mars.",
+          "keywords": ["机器人", "optimus", "工作", "替代"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "ai-004",
+          "text": "We need maximum truth-seeking AI. Less political correctness, more physics.",
+          "keywords": ["grok", "xai", "真相", "模型"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "ai-005",
+          "text": "If you're not using AI tools daily, you're already behind. Not my rule — just math.",
+          "keywords": ["工具", "学习", "落后", "效率"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "ai-006",
+          "text": "Neural nets are basically curve fitting at scale. Scary when the curve fits reality.",
+          "keywords": ["神经网络", "深度学习", "技术"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "ai-007",
+          "text": "Humanoid form factor makes sense — the world is built for humans. Robots should adapt to doors, not the other way.",
+          "keywords": ["人形", "形态", "设计"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "ai-008",
+          "text": "AGI timeline? Could be soon. Could be later. Either way, don't panic-post — build.",
+          "keywords": ["agi", "通用", "时间", "预测"],
+          "source": "风格戏仿"
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "name": "Hardcore/创业",
+      "lines": [
+        {
+          "id": "wk-001",
+          "text": "Nobody ever changed the world on 40 hours a week. Hardcore — but point it at something measurable.",
+          "keywords": ["工作", "加班", "996", "hardcore", "努力"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "wk-002",
+          "text": "Starting a company is like eating glass and staring into the abyss. Also fun. Sometimes.",
+          "keywords": ["创业", "公司", "痛苦", "坚持"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "wk-003",
+          "text": "Hire for slope, not intercept. Smart + high work ethic beats resume padding.",
+          "keywords": ["招聘", "人才", "团队", "面试"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "wk-004",
+          "text": "If you're not failing, you're not innovating enough. Boring companies have boring failure rates — zero.",
+          "keywords": ["失败", "创新", "试错"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "wk-005",
+          "text": "Sleep is good. I recommend it. Just not 12 hours a day during a launch window.",
+          "keywords": ["睡眠", "健康", "节奏"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "wk-006",
+          "text": "Meetings are what happens when people are afraid to write things down and ship.",
+          "keywords": ["会议", "效率", "沟通"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "wk-007",
+          "text": "Focus on signal over noise. Twitter is mostly noise. Rockets are signal.",
+          "keywords": ["专注", "噪音", "信号", "分心"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "wk-008",
+          "text": "When something is important enough, you do it even if the odds are not in your favor.",
+          "keywords": ["坚持", "概率", "重要", "使命"],
+          "source": "风格戏仿"
+        }
+      ]
+    },
+    {
+      "id": "product",
+      "name": "产品/特斯拉",
+      "lines": [
+        {
+          "id": "pd-001",
+          "text": "Transport should go electric, then autonomous — in that order. Skipping steps is how you crash test wrong.",
+          "keywords": ["特斯拉", "tesla", "电动车", "ev", "交通"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "pd-002",
+          "text": "Autopilot means assist, not nap. Human in the loop until the math says otherwise.",
+          "keywords": ["自动驾驶", "辅助", "安全", "fsd"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "pd-003",
+          "text": "Manufacturing is hard. Designing the factory is the product. The car is the output.",
+          "keywords": ["制造", "工厂", "产能", "生产"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "pd-004",
+          "text": "Software updates beat model years. If your car can't OTA, it's already old.",
+          "keywords": ["软件", "更新", "ota", "迭代"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "pd-005",
+          "text": "Sustainable energy: solar + battery + electric. Boring combo, works like physics.",
+          "keywords": ["环保", "太阳能", "电池", "可持续"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "pd-006",
+          "text": "Price cuts? Economics. Demand curves don't care about your feelings.",
+          "keywords": ["降价", "价格", "市场", "需求"],
+          "source": "风格戏仿"
+        }
+      ]
+    },
+    {
+      "id": "media",
+      "name": "舆论/Meme",
+      "lines": [
+        {
+          "id": "md-001",
+          "text": "Haters are loud, orbit is quiet. Keep shipping — or keep posting memes. Ideally both, weighted toward shipping.",
+          "keywords": ["骂", "黑", "批评", "争议", "媒体"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "md-002",
+          "text": "Sometimes you shitpost, sometimes you ship. The ratio should favor ship.",
+          "keywords": ["推特", "x", "meme", "梗", "发帖"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "md-003",
+          "text": "Interesting. — my two favorite words before a 40-tweet thread nobody asked for.",
+          "keywords": ["interesting", "推文", "发言"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "md-004",
+          "text": "Short sellers are a feature of markets, not a personality test. Unless you're the short — then it's personal.",
+          "keywords": ["做空", "股票", "市场", "舆论"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "md-005",
+          "text": "Legacy media moves at human speed. Rockets don't wait for the editorial meeting.",
+          "keywords": ["媒体", "新闻", "速度"],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "md-006",
+          "text": "Being called crazy is step one. Step two is being called crazy while the thing actually works.",
+          "keywords": ["疯子", "不理解", "成功"],
+          "source": "风格戏仿"
+        }
+      ]
+    },
+    {
+      "id": "catchphrase",
+      "name": "口头禅尾巴",
+      "lines": [
+        { "id": "tail-001", "text": "Make it happen." },
+        { "id": "tail-002", "text": "Ship it." },
+        { "id": "tail-003", "text": "To the moon — literally." },
+        { "id": "tail-004", "text": "Hardcore." },
+        { "id": "tail-005", "text": "Interesting." },
+        { "id": "tail-006", "text": "Boil it down to physics." },
+        { "id": "tail-007", "text": "First principles." },
+        { "id": "tail-008", "text": "That's the mission." },
+        { "id": "tail-009", "text": "Now go build." },
+        { "id": "tail-010", "text": "Probably." }
+      ]
+    },
+    {
+      "id": "opener",
+      "name": "开场前缀",
+      "lines": [
+        { "id": "op-001", "text": "Look —" },
+        { "id": "op-002", "text": "Honestly," },
+        { "id": "op-003", "text": "From first principles:" },
+        { "id": "op-004", "text": "OK so" },
+        { "id": "op-005", "text": "Real talk:" },
+        { "id": "op-006", "text": "Here's the thing:" },
+        { "id": "op-007", "text": "Sure," },
+        { "id": "op-008", "text": "Wild idea:" }
+      ]
+    },
+    {
+      "id": "fallback",
+      "name": "未命中兜底",
+      "lines": [
+        {
+          "id": "fb-001",
+          "text": "Question is vague. Make it measurable — then we can iterate.",
+          "keywords": [],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "fb-002",
+          "text": "Not sure what you're optimizing for. Define the objective function first.",
+          "keywords": [],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "fb-003",
+          "text": "Outside my parody scope — but still, go build something useful.",
+          "keywords": [],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "fb-004",
+          "text": "I'd need more constraints. Physics hates hand-waving.",
+          "keywords": [],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "fb-005",
+          "text": "Default answer: zoom out, first principles, then ship a prototype.",
+          "keywords": [],
+          "source": "风格戏仿"
+        },
+        {
+          "id": "fb-006",
+          "text": "This is entertainment parody, not official guidance. Still — interesting problem.",
+          "keywords": [],
+          "source": "风格戏仿"
+        }
+      ]
+    }
+  ]
+}
