@@ -29,6 +29,34 @@ function resolveAssetUrl(src) {
   return s
 }
 
+/**
+ * Canvas 海报等需读像素场景：/roles/ 本地资源改走 API 代理（带 CORS）。
+ * 生产前后端分域时，前端域名通常无 /roles/ 静态目录；直连 nginx 静态也无 CORS。
+ */
+function resolveCanvasAssetUrl(src) {
+  const s = String(src || '').trim()
+  if (!s) return ''
+  if (/^(data:|blob:)/i.test(s)) return s
+
+  let pathname = s
+  if (/^https?:\/\//i.test(s)) {
+    try {
+      pathname = new URL(s).pathname
+    } catch {
+      return resolveAssetUrl(s)
+    }
+  }
+
+  const m = pathname.match(/^\/roles\/([^/]+)\/asset\/([^/?#]+)$/)
+  if (m) {
+    const [, slug, file] = m
+    const q = `slug=${encodeURIComponent(slug)}&file=${encodeURIComponent(decodeURIComponent(file))}`
+    return `${API_BASE}/role-asset.php?${q}`
+  }
+
+  return resolveAssetUrl(s)
+}
+
 async function request(path, options = {}) {
   const { headers: extraHeaders, ...rest } = options
   const urlPath = path.startsWith('/') ? path : `/${path}`
@@ -68,4 +96,4 @@ async function request(path, options = {}) {
   return json && json.data !== undefined ? json.data : json
 }
 
-export { API_BASE, ASSET_BASE, resolveAssetUrl, request }
+export { API_BASE, ASSET_BASE, resolveAssetUrl, resolveCanvasAssetUrl, request }
