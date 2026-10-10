@@ -21,7 +21,8 @@
     "preview": "npm run preview --prefix frontend",
     "lint": "npm run lint --prefix frontend",
     "install:frontend": "npm install --prefix frontend",
-    "postinstall": "npm install --prefix frontend"
+    "postinstall": "npm install --prefix frontend",
+    "smoke": "bash scripts/smoke.sh"
   },
   "engines": {
     "node": ">=18"

@@ -45,7 +45,7 @@ $cfg = array(
 
     // 轻量后台
     'admin_user'      => 'admin',
-    'admin_password'  => 'admin123',  // 生产务必修改
+    'admin_password'  => (getenv('MRD_ADMIN_PASSWORD') !== false && getenv('MRD_ADMIN_PASSWORD') !== '') ? getenv('MRD_ADMIN_PASSWORD') : '',  // 生产必设；勿再写死
     'admin_session'   => 'mrd_admin',
 
     // CORS 由 nginx 管理；PHP mrd_cors() 不再输出 Access-Control-*（避免双头）

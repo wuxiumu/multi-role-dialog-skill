@@ -20,3 +20,5 @@ backend/data/sessions/
 
 # 旧版单体赢学目录（仅根路径；勿忽略 backend/roles/yingxue）
 /yingxue/
+.env.*
+!.env.example

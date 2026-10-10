@@ -24,6 +24,17 @@
 
 ---
 
+
+## 环境变量
+
+复制 `.env.example` → `.env`。**务必设置 `MRD_ADMIN_PASSWORD`**（默认管理口令已清空）。
+
+## 冒烟自检
+
+```bash
+bash scripts/smoke.sh
+```
+
 ## 快速开始
 
 ```bash
