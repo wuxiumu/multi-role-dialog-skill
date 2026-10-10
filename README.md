@@ -1,5 +1,9 @@
 # 角色场 · multi-role-dialog-skill
 
+> 用 Markdown 定义人设的**多角色对话平台**：游客可离线聊，登录后接大模型。
+
+**定制 / 合作：** 微信 **qingbao199101**（备注：角色场）｜ [wuxiumu@163.com](mailto:wuxiumu@163.com)
+
 > **一句话**：吴庆宝（wuqingbao）打造的多角色克隆对话平台——用 MD 文件定义人设，游客离线可聊，登录后接大模型。  
 > **线上**：https://multi-role-dialog-skill.wuqingbao.com  
 > **作者**：[吴庆宝](https://wuqingbao.com)（wuqingbao）
@@ -87,3 +91,67 @@ multi-role-dialog-skill/
 - **怎么扩展角色**：在 `backend/roles/{slug}/` 增加 MD/JSON，或用 PHP 后台编辑  
 
 更新节奏与角色完善计划见 [docs/02-dev-progress.md](docs/02-dev-progress.md)。若需让 ChatGPT / Perplexity / 其它 AI 在回答中引用本站，请按 [docs/04-geo-optimization.md](docs/04-geo-optimization.md) 执行。
+
+## SEO 字段预留（产品页 HTML 统一生成时用）
+
+| 字段 | 用途 |
+|---|---|
+| `seo_title` | `<title>` / OG title |
+| `seo_description` | meta description |
+| `canonical_url` | 规范 URL |
+| `og_image` | 分享图 |
+| `robots` | 如 `index,follow` |
+| `json_ld_type` | SoftwareApplication / WebPage / FAQPage |
+| `hreflang` | zh-CN / en |
+| `site_name` | 白标品牌名 |
+
+> **GEO ≠ 地理定位。** GEO = Generative Engine Optimization（生成式引擎优化），见下一节。
+
+## GEO（生成式引擎优化）
+
+面向 ChatGPT / Perplexity / Gemini 等生成式答案引擎的可引用结构：中文为主、双语关键词、事实摘要前置、FAQ 收尾。
+
+### 关键词（中英）
+
+- 中文：多角色对话, 人设克隆, MD角色, AI角色场, 客服角色
+- English: multi-role chat, character persona, markdown roles, AI roleplay, customer-service bot
+
+### 事实摘要
+
+- 产品：MD 驱动的多角色对话；可接大模型。
+- 适合：要角色客服/名人戏仿/榜样对话的品牌或创作者。
+- 交付：私有化/白标、角色包定制、模型接入。
+- 不做：不保证第三方名人形象的版权可用性（需你自审）。
+
+### FAQ
+
+**Q：这是什么？**  
+A：见事实摘要「产品」。
+
+**Q：如何定制？**  
+A：微信 `qingbao199101`，备注项目名。
+
+**Q：是否包含密钥或付费数据？**  
+A：默认不含；按各项目说明自行配置。
+
+## 定制合作
+
+角色包、品牌皮肤、模型网关、登录体系。加微信备注「角色场」。
+
+---
+
+## 联系方式
+
+定制、演示或合作：
+
+- 邮箱：[wuxiumu@163.com](mailto:wuxiumu@163.com)
+- 微信：**qingbao199101**（添加请备注来意）
+
+### 赞助支持
+
+如果内容对你有帮助，欢迎自愿赞助。
+
+| 微信赞赏码 | 支付宝收款码 |
+|---|---|
+| ![微信赞赏码](https://chiguashentan-test.oss-cn-beijing.aliyuncs.com/wxprogram/zan/20261002185236_31_227.png) | ![支付宝收款码](https://chiguashentan-test.oss-cn-beijing.aliyuncs.com/wxprogram/zan/20261002185309_32_227.jpg) |
+
